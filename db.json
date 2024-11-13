@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Getting Started with React",
+      "content": "React is a powerful library for building user interfaces. It uses a component-based architecture that makes it easy to create reusable UI elements...",
+      "excerpt": "Learn the basics of React and start building amazing web applications."
+    },
+    {
+      "id": 2,
+      "title": "Understanding State Management",
+      "content": "State management is crucial in React applications. It helps you maintain and update data throughout your application in a predictable way...",
+      "excerpt": "Deep dive into React state management concepts and best practices."
+    },
+    {
+      "id": 3,
+      "title": "Component Composition in React",
+      "content": "Component composition is a fundamental concept in React. It allows you to build complex UIs from smaller, reusable pieces...",
+      "excerpt": "Master the art of combining React components to create scalable applications."
+    }
+  ]
+}

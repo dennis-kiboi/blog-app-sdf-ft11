@@ -1,11 +1,19 @@
-import { Link } from 'react-router-dom';
-import { blogPosts } from '../data/posts';
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export function PostList() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/posts")
+      .then(res => res.json())
+      .then(blogPosts => setPosts(blogPosts));
+  }, []);
+
   return (
     <div className="post-list">
       <h2>Latest Posts</h2>
-      {blogPosts.map(post => (
+      {posts.map(post => (
         <article key={post.id} className="post-preview">
           <h3>{post.title}</h3>
           <p>{post.excerpt}</p>

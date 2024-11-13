@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import { blogPosts } from "../data/posts";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 export function Post() {
   const { postId } = useParams();
+  const [post, setPost] = useState({});
 
-  const [post] = blogPosts.filter(blogPost => {
-    return blogPost.id == postId;
+  useEffect(() => {
+    fetch(`http://localhost:8000/posts/${parseInt(postId)}`)
+      .then(res => res.json())
+      .then(data => setPost(data));
   });
-
-  console.log(post);
 
   return (
     <article className="post-full">
