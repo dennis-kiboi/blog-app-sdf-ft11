@@ -5,7 +5,7 @@ export function PostList() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/posts")
+    fetch("https://blog-app-sdf-ft11-json-server.onrender.com/posts")
       .then(res => res.json())
       .then(blogPosts => setPosts(blogPosts));
   }, []);

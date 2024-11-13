@@ -6,7 +6,7 @@ export function Post() {
   const [post, setPost] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:8000/posts/${parseInt(postId)}`)
+    fetch(`https://blog-app-sdf-ft11-json-server.onrender.com/posts/${parseInt(postId)}`)
       .then(res => res.json())
       .then(data => setPost(data));
   });
